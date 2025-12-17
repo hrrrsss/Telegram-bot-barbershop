@@ -6,11 +6,17 @@ class Settings(BaseSettings):
     log_level: str
     log_format: str
 
+    #POSTGRESQL
     DB_HOST: str
     DB_PORT: int
     DB_USER: str
     DB_PASS: str
     DB_NAME: str
+
+    #REDIS
+    R_HOST: str
+    R_PORT: int
+    R_DB: int
 
     @property
     def DATABASE_URL_asyncpg(self):

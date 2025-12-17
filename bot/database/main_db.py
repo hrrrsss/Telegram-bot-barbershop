@@ -1,7 +1,7 @@
 import asyncio
 
 from bot.database.engine_db import engine, Base
-from bot.database.tables_db import Barbers, Services, Dates # Обязательно нужно импортировать все модели
+from bot.database.tables_db import Barbers, Services, Users # Обязательно нужно импортировать все модели
 
 
 async def create_tables():

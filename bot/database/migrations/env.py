@@ -7,7 +7,10 @@ from alembic import context
 
 from bot.config.config import settings
 
-from bot.database.tables_db import Barbers, Services, Dates
+from bot.database.tables_db import (Users, Admins,
+                                    Barbers, Services,
+                                    Barber_services, Appointments,
+                                    BarberSchedule)
 from bot.database.engine_db import Base
 
 config = context.config
@@ -62,7 +65,7 @@ def run_migrations_online() -> None:
         context.configure(
             connection=connection, 
             target_metadata=target_metadata,
-            compare_server_default=True
+            compare_server_default=True,
         )
 
         with context.begin_transaction():
