@@ -75,7 +75,7 @@ class Services(Base):
     is_active: Mapped[bool]
 
 
-class Barber_services(Base):
+class BarberServices(Base):
     __tablename__ = "barber_services"
 
     id: Mapped[intpk]
@@ -122,7 +122,7 @@ class Appointments(Base):
                                            nullable=False)
     status: Mapped[AppointmentStatus] = mapped_column(
         SQLEnum(AppointmentStatus,
-                name="appointment_status"),
+        name="appointment_status"),
         nullable=False,
         default=AppointmentStatus.ACTIVE
     )

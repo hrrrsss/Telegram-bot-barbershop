@@ -12,7 +12,7 @@ from keyboards.user_kb import start_kb
 start_router = Router()
 
 
-@start_router.message((F.text == "/start") | (F.text == "👈На главную"))
+@start_router.message((F.text == "/start") | (F.text == "👈 На главную"))
 async def start_cmd(message: Message, state: FSMContext):
     await state.clear()
 
